@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>WoodWideWeb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <nav class="navbar">
+		<div class="text-container">
+			<a href="./index.html#woodwideweb" class="nav-item"><p>WOODWIDEWEB</p></a> -->
+    <!-- <a href="#woodwideweb" class="nav-item"><p>WOODWIDEWEB</p></a>
+			<a href="#hypastudio" class="nav-item"><p>EXPERIENCE</p></a>
+			<a href="#hypastudio" class="nav-item"><p>RADIO</p></a> -->
+    <!-- </div>
+	</nav> -->
+
+    <div class="intro">
+      <span class="logogrande">
+        <img id="imggrande" src="./img/logoWWW.png" alt="MENU" />
+      </span>
+    </div>
+
+    <script type="text/javascript">
+      // TRANSIZIONE INIZIALE
+      let intro = document.querySelector(".intro");
+      let logogrande = document.querySelectorAll(".logogrande");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          logogrande.forEach((span, idx) => {
+            setTimeout(() => {
+              span.classList.add("active");
+            }, (idx + 1) * 400);
+          });
+
+          setTimeout(() => {
+            logogrande.forEach((span, idx) => {
+              setTimeout(() => {
+                span.classList.remove("active");
+                span.classList.add("fade");
+              }, (idx + 1) * 5);
+            });
+          }, 3000);
+
+          setTimeout(() => {
+            intro.style.top = "-100vh";
+          }, 3300);
+        });
+      });
+    </script>
+
+    <!-- <p onclick="location.href='./index.html';" style="cursor:pointer">WOODWIDEWEB</p> -->
+    <!-- <img id="immaginegrande"><<source src="https://" type="video/"> -->
+    <div class="box">
+      <!-- <a href="./index.html" class="nav-item"><p id="scrittawww">WOODWIDEWEB</p></a> -->
+      <div class="nav-item">
+        <p
+          id="scrittawww"
+          onclick="location.href='./homepage.html';"
+          style="cursor: default"
+        >
+          WHAT IF THE WORLD IS FUNGICENTRIC?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

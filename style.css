@@ -1,0 +1,865 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  background-repeat: repeat;
+  font-family: "gerstner_programmregular", sans-serif;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h1 {
+  font-family: "gerstner_programmregular", sans-serif;
+}
+
+p {
+  font-family: "suisse_intl_monoregular", sans-serif;
+  text-transform: none;
+}
+
+a {
+  color: #000000;
+  cursor: default;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+/* INTRO */
+.intro {
+  margin: 0;
+  padding: 10px;
+  padding-top: 64px;
+  margin-top: 10;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  transition: 4s;
+  align-self: center;
+}
+
+.logogrande {
+  position: relative;
+  align-self: center;
+  align-items: center;
+  display: inline-block;
+  width: 70%;
+  margin-top: 10%;
+  padding-left: 30%;
+  bottom: -10px;
+  opacity: 0;
+}
+
+.logogrande.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.7s;
+  align-self: center;
+}
+
+.logogrande.fade {
+  bottom: 1300px;
+  opacity: 0;
+  transition: ease-in-out 0.7s;
+}
+
+#imggrande {
+  /* opacity: 1;
+  filter: alpha(opacity=40);
+  transition-property: opacity;
+  transition-duration: 2s; */
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  height: 50vh;
+  text-align: center; /* orizzontale */
+  /* line-height: 600px; /* verticale */
+}
+
+#scrittawww {
+  font-family: "gerstner_programmregular", sans-serif;
+  font-size: 20px;
+  padding-top: 300px;
+}
+
+#scrittawww:hover {
+  text-decoration: underline;
+}
+
+/* #imggrande:hover {
+    opacity:0.4;
+    filter: alpha(opacity=100);
+} */
+
+/* Definisce la navbar */
+.navbar {
+  display: flex;
+  min-height: 64px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: "gerstner_programmregular", sans-serif;
+  font-size: 20px;
+}
+
+.icon-container {
+  padding-right: 20px;
+  padding-top: 0;
+  margin-left: auto;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon-container img {
+  height: 24px;
+}
+
+.icon2-container {
+  padding-right: 20px;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: 20px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon2-container img {
+  height: 24px;
+}
+
+#logo img {
+  padding-top: -20px;
+}
+
+.text-container {
+  margin: 0;
+  padding-right: 16px;
+  padding-top: 10px;
+
+  /* margin-left: 30px; */
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  flex-direction: row;
+  text-align: left;
+  /* justify-content: space-between; */
+}
+
+.text-container a,
+.text-container p {
+  font-family: "gerstner_programmregular", sans-serif;
+  font-size: 20px;
+  padding-right: 50px;
+}
+
+.text-container li {
+  margin: 0;
+  padding: 0;
+}
+
+/* MENU A TENDINA */
+
+/* input.jm-menu-btn,
+input[type="checkbox"].jm-menu-btn ~ .text-container {
+  display: none;
+}
+input[type="checkbox"]:checked.jm-menu-btn ~ .text-container {
+  display: block;
+}
+label.jm-menu-btn {
+  color: #000000;
+  display: block;
+  padding: 16px 32px;
+}
+
+.navbar li,
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  display: inline-block;
+  padding: 16px 32px;
+}
+
+.navbar ul ul {
+  display: none;
+} */
+
+/* .jm-icon-menu::before {
+  content: "\2630";
+} */
+/* @media (min-width: 768px) {
+  .navbar li {
+    display: inline-block;
+  }
+  .navbar a {
+    padding: 16px;
+  }
+
+  input.jm-menu-btn,
+  label.jm-menu-btn {
+    display: none;
+  }
+  .text-container,
+  input[type="checkbox"].jm-menu-btn ~ .text-container {
+    display: block;
+  }
+} */
+
+/* MENU2 A TENDINA */
+.hamburger {
+  display: none;
+}
+
+/* .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .nav-item {
+  margin-left: 5rem;
+} */
+
+@media only screen and (max-width: 768px) {
+  .text-container {
+    position: fixed;
+    left: -120%;
+    top: 64px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    /* border-radius: 10px; */
+    text-align: center;
+    transition: 0.3s;
+    /* box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); */
+  }
+
+  .text-container.active {
+    left: 0;
+  }
+
+  .icon-container {
+    padding-top: 15px;
+  }
+
+  /* .nav-item {
+    margin: 2.5rem 0;
+  } */
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* // Inside the Media Query. */
+
+/* .hamburger.active {
+  opacity: 0;
+}
+
+.hamburger.active {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active {
+  transform: translateY(-8px) rotate(-45deg);
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* SCRITTA YOUR CONNECTION POINT */
+.scritta {
+  margin-top: -5%;
+  padding-top: 64px;
+}
+.scritta p {
+  padding: 0;
+  text-align: center;
+  font-size: 7.5rem;
+  width: 100%;
+}
+
+#grande {
+  font-family: "gerstner_programmregular", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+.content span {
+  display: flex;
+  font-family: "suisse_intl_monoregular", sans-serif;
+  font-size: 5rem;
+}
+
+.random {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+/* #coordinata {
+  margin-top: -50px;
+  font-family: "Suisse Int'l Mono", sans-serif;
+ font-size: 5rem;
+} */
+
+#titolo {
+  font-family: "gerstner_programmregular", sans-serif;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 40px;
+}
+
+.micelio {
+  margin-top: 100px;
+  padding: 0;
+}
+
+.micelio img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.abstract {
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+
+/* TESTO IN MOVIMENTO */
+section p {
+  text-transform: none;
+}
+
+@media (max-width: 768px) {
+  section p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  section {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.galleria {
+  margin: 0;
+  padding: 0;
+}
+
+.galleria img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* contenitore della galleria */
+.slideshow-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: flex;
+}
+
+.prototipo {
+  margin-top: 0;
+  padding: 0;
+}
+
+.prototipo img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.didascalia {
+  margin-top: 0;
+  padding: 60px;
+  padding-top: 60px;
+  padding-left: 0;
+  font-size: 15px;
+  align-items: center;
+}
+
+.prototipo2 {
+  margin-top: 0;
+  padding: 0;
+}
+
+.prototipo2 img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#fungo {
+  padding-top: 100px;
+  width: 80%;
+}
+
+.didascalia2 {
+  margin-top: 0;
+  padding: 0px;
+  padding-top: 250px;
+  padding-left: 250px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.video {
+  margin-top: 100px;
+  padding: 0;
+}
+
+.video video {
+  margin: 0;
+  padding: 0;
+}
+
+.introduttivo p {
+  font-size: 15px;
+  padding-left: 8px;
+  margin-bottom: 7px;
+  font-family: "suisse_intl_monoregular", sans-serif;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.introduttivo img {
+  padding-left: 8px;
+  margin-top: 7px;
+  width: 100%;
+}
+
+.aside {
+  background-color: #ffffff;
+  padding: 5px;
+  color: #000000;
+  text-align: center;
+  font-size: 10px;
+}
+
+.aside img {
+  padding: 15px;
+  width: 100%;
+}
+
+.fototessera {
+  width: 100%;
+}
+
+.artefatto {
+  width: 100%;
+  align-items: center;
+}
+
+/* .artefatto50 {
+  width: 50%;
+} */
+#nomeartefatto {
+  text-align: center;
+}
+
+#scrittawelcome {
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: "gerstner_programmregular", sans-serif;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.text2-container {
+  align-self: center;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  flex-direction: row;
+}
+
+.text2-container a,
+.text2-container p {
+  font-family: "gerstner_programmregular", sans-serif;
+  font-size: 20px;
+}
+
+/* PAGINA RADIO */
+.elenco {
+  margin: auto;
+  /* list-style: none;
+  list-style-position: inherit; */
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.elenco p.show {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.elenco p {
+  /* float: left; */
+  padding: 1px;
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.5s ease-in;
+  font-size: 30px;
+  text-align: center;
+}
+
+.radiovideo {
+  padding-top: 64px;
+}
+.radio img {
+  margin: 0;
+  padding: 0px;
+  /* width: 100%; */
+}
+
+.radio p {
+  margin: 0;
+  padding: 0px;
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.radio audio {
+  width: 100%;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .button {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: none;
+    align-items: center;
+    background-color: #ff55ff;
+    padding: 1% 1% 1% 1%;
+    display: inline-block;
+    appearance: none;
+    line-height: inherit;
+  } */
+
+button:hover {
+  cursor: crosshair;
+  opacity: 0.2;
+}
+
+#onair p {
+  font-family: "gerstner_programmregular", sans-serif;
+  font-size: 25px;
+}
+
+.radioonair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#playimg {
+  padding-top: 3px;
+}
+/* .radioonair p {
+  margin-left: 2px;
+  text-align: left;
+  float: right;
+  align-items: top;
+}
+
+.radioplay img {
+  margin-right: 1px;
+  text-align: right;
+  float: right;
+} */
+
+.playonair {
+  border: none;
+  background: none;
+  /* opacity: 0;
+  transition-property: all;
+  transition-duration: 3s;
+  animation:3s blinker linear infinite; */
+}
+
+/* @keyframes blinker {
+0% { opacity: 1.0; }
+50% { opacity: 0.0; }
+100% { opacity: 1.0; }
+} */
+
+.play {
+  border: none;
+  background: none;
+}
+
+.testoradio {
+  padding-top: 100px;
+}
+.testoradio p {
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+.clicktolisten {
+  align-items: top;
+  text-align: center;
+}
+
+/* .play {position: relative; z-index: 8; text-decoration: none !important}
+.play:hover {background: transparent; z-index: 9}
+.play > div {display: none; position: absolute; top: 50px; left: 0px; padding: 5px}
+.play > div img {padding: 2px}
+.play:hover > div {display: block; border: 1px solid #DDD; background-color: #FFF; color: black}
+.play:hover span span {display: inline; border: none} */
+
+#hyphastudio {
+  padding-top: 32px;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*="col-"] {
+    width: 100%;
+  }
+  .logogrande {
+    margin-top: 55%;
+  }
+  .scritta {
+    margin-top: 0;
+  }
+
+  .scritta p {
+    width: 100%;
+  }
+
+  #grande {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  #titolo {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0%;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content span {
+    font-size: 2.5rem;
+  }
+  .random {
+    margin: 5px;
+  }
+  .text-container a,
+  .text-container p {
+    padding-right: 10px;
+  }
+  .text2-container a,
+  .text2-container p {
+    padding-right: 10px;
+  }
+  .text2-container {
+    flex-direction: column;
+  }
+  .slideshow-container {
+    width: 100%;
+  }
+  .mySlides {
+    width: 100%;
+  }
+  /* .prototipo img {
+    width: 30%;
+  } */
+  .didascalia {
+    margin-top: 0;
+    padding: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #fungo {
+    padding-top: 0%;
+    width: 100%;
+  }
+  .didascalia2 {
+    margin-top: 0;
+    padding: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .introduttivo p {
+    text-align: center;
+    font-size: 1.5rem;
+    column-count: 1;
+  }
+  .play p {
+    color: #000000;
+    cursor: default;
+    font-size: 1.5rem;
+  }
+
+  #onair p {
+    color: #000000;
+  }
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#radio {
+  padding: 0 24px;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-item img {
+  width: 100%;
+}
+
+#play img {
+  padding-top: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+#musica video {
+  padding-left: 20px;
+  width: 1000px;
+  height: 400px;
+}
+
+/* qui stiamo facendo responsive abbiamo cambiato la flex direction da riga sopra i 840px a colonna sotto di essi
+al di sotto di 840 px passiamo da avere una disposizione a colonne a una disposizione a righe*/
+@media only screen and (min-width: 840px) {
+  .radio-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 800px) {
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+  }
+}

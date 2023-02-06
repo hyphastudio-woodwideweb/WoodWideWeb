@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>WoodWideWeb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script type="text/javascript">
+// AUDIO RADIO
+
+init = function(evento){
+		var bottoni = document.querySelectorAll('button');
+		for(var b=0; b < bottoni.length; b ++){
+			var effetto_audio = bottoni[b].dataset.effettoAudio;
+			if(effetto_audio != ""){
+				var audio = new Audio(effetto_audio);
+				audio.bottone_di_riferimento = bottoni[b];
+				audio.addEventListener('canplaythrough',
+					function(evento_load){
+						var bottone = evento_load.target.bottone_di_riferimento;
+						bottone.disabled = false;
+						bottone.audio_di_riferimento = evento_load.target;
+						bottone.addEventListener('click',
+							function(evento_click){
+								evento_click.target.audio_di_riferimento.play();
+							}
+						);
+					}
+				);
+			}
+		}
+	}
+window.addEventListener('load', init);
+</script> -->
+  </head>
+  <body onload="playAudio()">
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger icon2-container">
+          <img src="./img/hamburger_icon.png" alt="hamburger" />
+        </div>
+        <ul class="text-container">
+          <li class="nav-item">
+            <a href="./homepage.html#woodwideweb" class="nav-link"
+              ><p>WOODWIDEWEB</p></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./homepage.html#experience" class="nav-link"
+              ><p>EXPERIENCE</p></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./radio.html" class="nav-link"><p>RADIO</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="./hyphastudio.html#hyphastudio" class="nav-link"
+              ><p>HYPHA STUDIO</p></a
+            >
+          </li>
+        </ul>
+
+        <div class="icon-container">
+          <a href="./index.html"
+            ><img id="logo" src="./img/logoWWW.png" alt="logo"
+          /></a>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".text-container");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+
+    <!-- PRIMA RIGA -->
+    <!-- <div class="row radiovideo">
+		<div class="col-12">
+			<p>CASCATA PAROLE</p>
+		</div>
+		<div class="col-5">
+		</div>
+
+		<div class="col-1 elenco">
+			<p class="show">HEAT</p>
+			<p class="show">ANIMAL</p>
+			<p class="show">ATTACK</p>
+			<p class="show">ELETTRICITY</p>
+			 <li class="show">FERTILITY</li>
+			<li class="show">LAKE</li>
+			<li class="show">LIFE</li>
+			<li class="show">SIZE</li>
+			<li class="show">SOUND</li>
+			<li class="show">UNKNOWN</li> -->
+    <!-- </div>
+
+		<script type="text/javascript">
+			const words = document.querySelectorAll("p")
+
+			setTimeout(() => {
+				Array.from(words).forEach((words, index) => {
+					setTimeout(() => {
+						words.classList.toggle("show");
+					}, index * 150);
+				})
+			}, 1000);
+		</script> -->
+
+    <!-- <div class="row">
+      <div class="col-12">
+        <p id="titolo">RADIO</p>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-12 testoradio">
+        <p>Listen to the conversation in real time</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radioonair">
+        <div id="playimg">
+          <button id="onair" class="playonair" onclick="playAudio()">
+            <img
+              id="playButton"
+              src="./img/play.png"
+              name="AceJSimage"
+              width="20px"
+              height="20px"
+              onClick="AceJSswapper();"
+            />
+          </button>
+        </div>
+        <div>
+          <button id="onair" class="playonair">
+            <!-- <p>&bull;ON AIR</p> -->
+            <!-- onclick="wavesurfer0.playPause()" -->
+
+            <p>ON AIR</p>
+          </button>
+        </div>
+
+        <script>
+          var audio;
+          var isPlaying = false;
+          function playAudio() {
+            if (!audio) {
+              audio = new Audio("./words_suoni/Fungus_RADIO 2bis.mp3");
+            }
+            audio.currentTime = Math.random() * audio.duration * 0.85;
+            audio.addEventListener(
+              "ended",
+              function () {
+                this.currentTime = 0;
+                this.play();
+              },
+              false
+            );
+            return audio.paused ? audio.play() : audio.pause();
+          }
+
+          // audio.onplaying = function () {
+          //   isPlaying = true;
+          // };
+          // audio.onpause = function () {
+          //   isPlaying = false;
+          // };
+
+          // function pauseAudio() {
+          //   audio.pause();
+          // }
+
+          // var playButton = document.getElementById("playButton");
+          // var pauseButton = document.getElementByClass("pauseButton");
+          // playButton.addEventListener("click", playAudio, false);
+          // pauseButton.addEventListener("click", pauseAudio, false);
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <!-- <video width="100%" autoplay loop muted>
+			<source src="./img/ondasonora.mp4" type="video/mp4">
+			<p>Your browser does not support the video tag.</p>
+		</video> -->
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform0"></div>
+        <!-- <button class="live" onclick="wavesurfer0.getCurrentTime(30)">
+          Live
+        </button> -->
+        <script>
+          var wavesurfer0 = WaveSurfer.create({
+            container: "#waveform0",
+            waveColor: "#000000",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            cursorWidth: "0",
+            height: "400",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer0.load("./words_suoni/Fungus_RADIO 2quatris.mp3");
+        </script>
+      </div>
+    </div>
+
+    <!-- SECONDA RIGA -->
+    <div class="row">
+      <div class="col-12">
+        <p id="titolo">SOUND LIBRARY</p>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-12 clicktolisten">
+			<p>click the word to listen the sound</p>
+		</div> -->
+    </div>
+
+    <!-- TERZA RIGA -->
+    <div class="row">
+      <div class="col-1"></div>
+      <!-- <div class="col-1 radio">
+			<button class="button" data-effetto-audio="./words_suoni/Words_Adult.wav" disabled><img src="./img/play.png" alt="PLAY" width="30px" height="35px"></button>
+		</div> -->
+      <div class="col-3 radio">
+        <!-- <a class="thumbnail"> -->
+        <button class="play" onclick="wavesurfer24.playPause()">
+          <p>&rtrif;ADULT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform24" class="onda"></div>
+        <script>
+          var wavesurfer24 = WaveSurfer.create({
+            container: "#waveform24",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer24.load("./words_suoni/Words_Adult.wav");
+        </script>
+        <!-- </a> -->
+      </div>
+
+      <div class="col-4"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer25.playPause()">
+          <p>&rtrif;ANIMAL</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform25"></div>
+        <script>
+          var wavesurfer25 = WaveSurfer.create({
+            container: "#waveform25",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer25.load("./words_suoni/Words_Animal.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer26.playPause()">
+          <p>&rtrif;ARIDITY</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform26"></div>
+        <script>
+          var wavesurfer26 = WaveSurfer.create({
+            container: "#waveform26",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer26.load("./words_suoni/Words_Aridity.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer27.playPause()">
+          <p>&rtrif;ASEXUAL</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform27"></div>
+        <script>
+          var wavesurfer27 = WaveSurfer.create({
+            container: "#waveform27",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer27.load("./words_suoni/Words_Asexual.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer28.playPause()">
+          <p>&rtrif;ATTACK</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform28"></div>
+        <script>
+          var wavesurfer28 = WaveSurfer.create({
+            container: "#waveform28",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer28.load("./words_suoni/Words_Attack.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer29.playPause()">
+          <p>&rtrif;COLOR</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform29"></div>
+        <script>
+          var wavesurfer29 = WaveSurfer.create({
+            container: "#waveform29",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer29.load("./words_suoni/Words_Color.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+      <div class="col-4 radio">
+        <button class="play" onclick="wavesurfer30.playPause()">
+          <p>&rtrif;CONTAMINATION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform30"></div>
+        <script>
+          var wavesurfer30 = WaveSurfer.create({
+            container: "#waveform30",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer30.load("./words_suoni/Words_Contamination.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer31.playPause()">
+          <p>&rtrif;DANGER</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform31"></div>
+        <script>
+          var wavesurfer31 = WaveSurfer.create({
+            container: "#waveform31",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer31.load("./words_suoni/Words_Danger.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer32.playPause()">
+          <p>&rtrif;DEATH</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform32"></div>
+        <script>
+          var wavesurfer32 = WaveSurfer.create({
+            container: "#waveform32",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer32.load("./words_suoni/Words_Death.wav");
+        </script>
+      </div>
+
+      <div class="col-4"></div>
+
+      <div class="col-4 radio">
+        <button class="play" onclick="wavesurfer33.playPause()">
+          <p>&rtrif;DECOMPOSITION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform33"></div>
+        <script>
+          var wavesurfer33 = WaveSurfer.create({
+            container: "#waveform33",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer33.load("./words_suoni/Words_Decomposition.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-9 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer34.playPause()">
+          <p>&rtrif;DEFENCE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform34"></div>
+        <script>
+          var wavesurfer34 = WaveSurfer.create({
+            container: "#waveform34",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer34.load("./words_suoni/Words_Defence.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer35.playPause()">
+          <p>&rtrif;DEVELOPMENT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform35"></div>
+        <script>
+          var wavesurfer35 = WaveSurfer.create({
+            container: "#waveform35",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer35.load("./words_suoni/Words_Development.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer36.playPause()">
+          <p>&rtrif;ELECTRICITY</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform36"></div>
+        <script>
+          var wavesurfer36 = WaveSurfer.create({
+            container: "#waveform36",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer36.load("./words_suoni/Words_Electricity.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer37.playPause()">
+          <p>&rtrif;ENERGY</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform37"></div>
+        <script>
+          var wavesurfer37 = WaveSurfer.create({
+            container: "#waveform37",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer37.load("./words_suoni/Words_Energy.wav");
+        </script>
+      </div>
+
+      <div class="col-2"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer38.playPause()">
+          <p>&rtrif;FAMILY</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform38"></div>
+        <script>
+          var wavesurfer38 = WaveSurfer.create({
+            container: "#waveform38",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer38.load("./words_suoni/Words_Family.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer39.playPause()">
+          <p>&rtrif;FERTILITY</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform39"></div>
+        <script>
+          var wavesurfer39 = WaveSurfer.create({
+            container: "#waveform39",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer39.load("./words_suoni/Words_Fertility.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer40.playPause()">
+          <p>&rtrif;FIRE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform40"></div>
+        <script>
+          var wavesurfer40 = WaveSurfer.create({
+            container: "#waveform40",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer40.load("./words_suoni/Words_Fire.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer41.playPause()">
+          <p>&rtrif;HEAT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform41"></div>
+        <script>
+          var wavesurfer41 = WaveSurfer.create({
+            container: "#waveform41",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer41.load("./words_suoni/Words_Heat.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer43.playPause()">
+          <p>&rtrif;HEIGHT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform43"></div>
+        <script>
+          var wavesurfer43 = WaveSurfer.create({
+            container: "#waveform43",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer43.load("./words_suoni/Words_Height.wav");
+        </script>
+      </div>
+
+      <div class="col-3 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer44.playPause()">
+          <p>&rtrif;LAKE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform44"></div>
+        <script>
+          var wavesurfer44 = WaveSurfer.create({
+            container: "#waveform44",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer44.load("./words_suoni/Words_Lake.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer45.playPause()">
+          <p>&rtrif;LIFE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform45"></div>
+        <script>
+          var wavesurfer45 = WaveSurfer.create({
+            container: "#waveform45",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer45.load("./words_suoni/Words_Life.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer46.playPause()">
+          <p>&rtrif;LIGHT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform46"></div>
+        <script>
+          var wavesurfer46 = WaveSurfer.create({
+            container: "#waveform46",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer46.load("./words_suoni/Words_Light.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer47.playPause()">
+          <p>&rtrif;LIGHTNING</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform47"></div>
+        <script>
+          var wavesurfer47 = WaveSurfer.create({
+            container: "#waveform47",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer47.load("./words_suoni/Words_Lightning.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer48.playPause()">
+          <p>&rtrif;LOCATION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform48"></div>
+        <script>
+          var wavesurfer48 = WaveSurfer.create({
+            container: "#waveform48",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer48.load("./words_suoni/Words_Lightning.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer49.playPause()">
+          <p>&rtrif;MOISTURE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform49"></div>
+        <script>
+          var wavesurfer49 = WaveSurfer.create({
+            container: "#waveform49",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer49.load("./words_suoni/Words_Moisture.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer50.playPause()">
+          <p>&rtrif;MUTATION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform50"></div>
+        <script>
+          var wavesurfer50 = WaveSurfer.create({
+            container: "#waveform50",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer50.load("./words_suoni/Words_Mutation.wav");
+        </script>
+      </div>
+
+      <div class="col-3 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer42.playPause()">
+          <p>&rtrif;NOURISHMENT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform42"></div>
+        <div class="controls flex justify-between"></div>
+        <script>
+          var wavesurfer42 = WaveSurfer.create({
+            container: "#waveform42",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer42.load("./words_suoni/Words_Nourishment.wav");
+        </script>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+	<div class="col-1 radio">
+		<button class="button" type="button" data-effetto-audio="./words_suoni/Words_Nourishment.wav" disabled><img src="./img/play.png" alt="PLAY" width="30px" height="35px"></button>
+	</div>
+</div> -->
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer1.playPause()">
+          <p>&rtrif;PLANT</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform1"></div>
+
+        <!-- <button class="text-2xl hover:text-rosso duration-300 focus:outline-none" onclick="wavesurfer1.toggleMute()">
+		Mute
+	</button> -->
+        <script>
+          var wavesurfer1 = WaveSurfer.create({
+            container: "#waveform1",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer1.load("./words_suoni/Words_Plant.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer2.playPause()">
+          <p>&rtrif;POISON</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform2"></div>
+        <script>
+          var wavesurfer2 = WaveSurfer.create({
+            container: "#waveform2",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer2.load("./words_suoni/Words_Poison.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer3.playPause()">
+          <p>&rtrif;PRESSURE</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform3"></div>
+        <script>
+          var wavesurfer3 = WaveSurfer.create({
+            container: "#waveform3",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer3.load("./words_suoni/Words_Pressure.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer4.playPause()">
+          <p>&rtrif;PROTECTION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform4"></div>
+        <script>
+          var wavesurfer4 = WaveSurfer.create({
+            container: "#waveform4",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer4.load("./words_suoni/Words_Protection.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-9 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer5.playPause()">
+          <p>&rtrif;PROXIMITY</p>
+        </button>
+
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform5"></div>
+        <script>
+          var wavesurfer5 = WaveSurfer.create({
+            container: "#waveform5",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer5.load("./words_suoni/Words_Proximity.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer6.playPause()">
+          <p>&rtrif;RAIN</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform6"></div>
+        <script>
+          var wavesurfer6 = WaveSurfer.create({
+            container: "#waveform6",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer6.load("./words_suoni/Words_Rain.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+
+      <div class="col-4 radio">
+        <button class="play" onclick="wavesurfer7.playPause()">
+          <p>&rtrif;REPRODUCTION</p>
+        </button>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform7"></div>
+        <script>
+          var wavesurfer7 = WaveSurfer.create({
+            container: "#waveform7",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer7.load("./words_suoni/Words_Reproduction.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer8.playPause()">
+          <p>&rtrif;RESPONSE</p>
+        </button>
+
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform8"></div>
+        <script>
+          var wavesurfer8 = WaveSurfer.create({
+            container: "#waveform8",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer8.load("./words_suoni/Words_Response.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer9.playPause()">
+          <p>&rtrif;RIVER</p>
+        </button>
+
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform9"></div>
+        <script>
+          var wavesurfer9 = WaveSurfer.create({
+            container: "#waveform9",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer9.load("./words_suoni/Words_River.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer10.playPause()">
+          <p>&rtrif;SEX1</p>
+        </button>
+
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform10"></div>
+        <script>
+          var wavesurfer10 = WaveSurfer.create({
+            container: "#waveform10",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer10.load("./words_suoni/Words_Sex1.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer11.playPause()">
+          <p>&rtrif;SEX2</p>
+        </button>
+
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <div id="waveform11"></div>
+        <script>
+          var wavesurfer11 = WaveSurfer.create({
+            container: "#waveform11",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer11.load("./words_suoni/Words_Sex2.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer12.playPause()">
+          <p>&rtrif;SIZE</p>
+        </button>
+
+        <div id="waveform12"></div>
+        <script>
+          var wavesurfer12 = WaveSurfer.create({
+            container: "#waveform12",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer12.load("./words_suoni/Words_Size.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer13.playPause()">
+          <p>&rtrif;SMELL</p>
+        </button>
+        <div id="waveform13"></div>
+        <script>
+          var wavesurfer13 = WaveSurfer.create({
+            container: "#waveform13",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer13.load("./words_suoni/Words_Smell.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer14.playPause()">
+          <p>&rtrif;SOUND</p>
+        </button>
+
+        <div id="waveform14"></div>
+        <script>
+          var wavesurfer14 = WaveSurfer.create({
+            container: "#waveform14",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer14.load("./words_suoni/Words_Sound.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer15.playPause()">
+          <p>&rtrif;SOURCE</p>
+        </button>
+
+        <div id="waveform15"></div>
+        <script>
+          var wavesurfer15 = WaveSurfer.create({
+            container: "#waveform15",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer15.load("./words_suoni/Words_Source.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer16.playPause()">
+          <p>&rtrif;SPECIES</p>
+        </button>
+
+        <div id="waveform16"></div>
+        <script>
+          var wavesurfer16 = WaveSurfer.create({
+            container: "#waveform16",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer16.load("./words_suoni/Words_Species.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer17.playPause()">
+          <p>&rtrif;STERILITY</p>
+        </button>
+
+        <div id="waveform17"></div>
+        <script>
+          var wavesurfer17 = WaveSurfer.create({
+            container: "#waveform17",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer17.load("./words_suoni/Words_Sterility.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer18.playPause()">
+          <p>&rtrif;TEST</p>
+        </button>
+
+        <div id="waveform18"></div>
+        <script>
+          var wavesurfer18 = WaveSurfer.create({
+            container: "#waveform18",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer18.load("./words_suoni/Words_Test.wav");
+        </script>
+      </div>
+
+      <div class="col-4 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer19.playPause()">
+          <p>&rtrif;TOUCH</p>
+        </button>
+
+        <div id="waveform19"></div>
+        <script>
+          var wavesurfer19 = WaveSurfer.create({
+            container: "#waveform19",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer19.load("./words_suoni/Words_Touch.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer20.playPause()">
+          <p>&rtrif;UNKNOWN</p>
+        </button>
+
+        <div id="waveform20"></div>
+        <script>
+          var wavesurfer20 = WaveSurfer.create({
+            container: "#waveform20",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer20.load("./words_suoni/Words_Unknown.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer21.playPause()">
+          <p>&rtrif;VIRUS</p>
+        </button>
+
+        <div id="waveform21"></div>
+        <script>
+          var wavesurfer21 = WaveSurfer.create({
+            container: "#waveform21",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer21.load("./words_suoni/Words_Virus.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer22.playPause()">
+          <p>&rtrif;WEIGHT</p>
+        </button>
+
+        <div id="waveform22"></div>
+        <script>
+          var wavesurfer22 = WaveSurfer.create({
+            container: "#waveform22",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer22.load("./words_suoni/Words_Weight.wav");
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 radio"></div>
+
+      <div class="col-3 radio">
+        <button class="play" onclick="wavesurfer23.playPause()">
+          <p>&rtrif;YOUNG</p>
+        </button>
+
+        <div id="waveform23"></div>
+        <script>
+          var wavesurfer23 = WaveSurfer.create({
+            container: "#waveform23",
+            waveColor: "silver",
+            progressColor: "#000000",
+            cursorColor: "silver",
+            height: "300",
+            hideScrollbar: true,
+            mediaControls: true,
+          });
+          wavesurfer23.load("./words_suoni/Words_Young.wav");
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript" src="script.js"></script>
