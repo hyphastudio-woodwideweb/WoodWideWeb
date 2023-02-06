@@ -389,7 +389,7 @@ section p {
 
 @media (max-width: 750px) {
   section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
   }
   section {
@@ -845,30 +845,30 @@ button:hover {
   }
 
   #grande {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     text-align: center;
   }
   #titolo {
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     padding: 0%;
   }
   .content {
     flex-direction: column;
   }
   .content span {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
   .random {
     margin: 5px;
   }
   .text-container a,
   .text-container p {
-    padding-right: 10px;
+    padding: 6px;
   }
   .text2-container a,
   .text2-container p {
-    padding-right: 10px;
+    padding: 6px;
   }
   .text2-container {
     flex-direction: column;
@@ -885,7 +885,7 @@ button:hover {
   .didascalia {
     margin-top: 0;
     padding: 60px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
   }
   #fungo {
@@ -895,18 +895,18 @@ button:hover {
   .didascalia2 {
     margin-top: 0;
     padding: 60px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
   }
   .introduttivo p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     column-count: 1;
   }
   .play p {
     color: #000000;
     cursor: default;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   #onair p {
