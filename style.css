@@ -387,6 +387,16 @@ section p {
   }
 }
 
+@media (max-width: 750px) {
+  section p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  section {
+    flex-direction: column;
+  }
+}
+
 .reveal {
   position: relative;
   transform: translateY(200px);
@@ -810,6 +820,93 @@ button:hover {
     color: #000000;
     cursor: default;
     font-size: 1.5rem;
+  }
+
+  #onair p {
+    color: #000000;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /* For mobile phones: */
+
+  [class*="col-"] {
+    width: 100%;
+  }
+  .logogrande {
+    margin-top: 55%;
+  }
+  .scritta {
+    margin-top: 0;
+  }
+
+  .scritta p {
+    width: 100%;
+  }
+
+  #grande {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  #titolo {
+    text-align: center;
+    font-size: 2.7rem;
+    padding: 0%;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content span {
+    font-size: 2.1rem;
+  }
+  .random {
+    margin: 5px;
+  }
+  .text-container a,
+  .text-container p {
+    padding-right: 10px;
+  }
+  .text2-container a,
+  .text2-container p {
+    padding-right: 10px;
+  }
+  .text2-container {
+    flex-direction: column;
+  }
+  .slideshow-container {
+    width: 100%;
+  }
+  .mySlides {
+    width: 100%;
+  }
+  /* .prototipo img {
+    width: 30%;
+  } */
+  .didascalia {
+    margin-top: 0;
+    padding: 60px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  #fungo {
+    padding-top: 0%;
+    width: 100%;
+  }
+  .didascalia2 {
+    margin-top: 0;
+    padding: 60px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .introduttivo p {
+    text-align: center;
+    font-size: 1.1rem;
+    column-count: 1;
+  }
+  .play p {
+    color: #000000;
+    cursor: default;
+    font-size: 1.1rem;
   }
 
   #onair p {
