@@ -10,7 +10,7 @@ where the fungus of origin is settled.
 Wood Wide Web inspires you to detach yourself from everything you know and get in touch with what you belong to: the Earth. Raise with
 us a new way of living by joining the Fungi-centrism.
 
-![](./img/index_home/index (8).jpg)
+![](<./img/index_home/index%20(8).jpg>)
 
 # Hypha Studio
 
